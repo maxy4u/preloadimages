@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+     <link rel="stylesheet" href="myslider.css" />
+		
+	</head>
+	<body ng-controller="MainCtrl">
+		<div id="main">
+			<span id="tab1"></span><span id="tab2"></span><span id="tab3"></span>
+			<div  class="slideholder selected{{currentIndex}}">
+				<img 
+				ng-repeat="slide in slides track by $index"
+				class="slide" ng-class="{'selected':isCurrentSlideIndex($index)}" 
+				ng-src="{{slide.image}}"
+			/>
+			<a class="arrow prev" href="#" ng-click="prevSlide()"></a>
+    		<a class="arrow next" href="#" ng-click="nextSlide()"></a>
+			</div>
+			<nav class="nav">
+    			<div class="wrapper">
+    				<ul class="dots">
+						<li class="dot" ng-repeat="slide in slides track by $index">
+							<a href="#" ng-class="{'active':isCurrentSlideIndex($index)}"
+		    						ng-click="setCurrentSlideIndex($index)">
+		    				</a>
+		    			</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</body>
+	<script src="angular.js"></script>
+	<script src="app.js"></script>
+</html>

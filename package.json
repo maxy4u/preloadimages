@@ -1,0 +1,21 @@
+{
+  "name": "preloadimages",
+  "version": "1.0.0",
+  "description": "preload images in angular to boost performance",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "preload",
+    "timing",
+    "api",
+    "html5",
+    "angularjs"
+  ],
+  "author": "gaurav khurana",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^3.21.2"
+  }
+}
