@@ -6,16 +6,16 @@
 	</head>
 	<body ng-controller="MainCtrl">
 		<div id="main">
-			<span id="tab1"></span><span id="tab2"></span><span id="tab3"></span>
 			<div  class="slideholder selected{{currentIndex}}">
 				<img 
 				ng-repeat="slide in slides track by $index"
 				class="slide" ng-class="{'selected':isCurrentSlideIndex($index)}" 
 				ng-src="{{slide.image}}"
 			/>
+			
+			</div>
 			<a class="arrow prev" href="#" ng-click="prevSlide()"></a>
     		<a class="arrow next" href="#" ng-click="nextSlide()"></a>
-			</div>
 			<nav class="nav">
     			<div class="wrapper">
     				<ul class="dots">
